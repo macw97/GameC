@@ -12,7 +12,7 @@ namespace Game.Engine.Items
         public Katana() : base("item0942")
         {
             StrMod = 30;
-            PrMod = 150;
+            PrMod = 20;
             GoldValue = 60;
             PublicName = "Katana";
             PublicTip = "Very fast, precise sword. Converts 1/3 of your precision to strength";
@@ -20,6 +20,7 @@ namespace Game.Engine.Items
         public override void ApplyBuffs(Engine.CharacterClasses.Player currentPlayer, List<string> otherItems)
         {
             currentPlayer.StrengthBuff += StrMod + currentPlayer.Precision / 3;
+            currentPlayer.PrecisionBuff += PrMod;
         }
     }
 }

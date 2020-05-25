@@ -18,7 +18,7 @@ namespace Game.Engine.Items
         }
         public override void ApplyBuffs(Player currentPlayer, List<string> otherItems)
         {
-            StrMod = Convert.ToInt32(currentPlayer.Strength * 0.1);
+            currentPlayer.StrengthBuff += Convert.ToInt32(currentPlayer.Strength * 0.1);
         }
     }
 }

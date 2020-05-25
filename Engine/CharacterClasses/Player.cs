@@ -155,10 +155,14 @@ namespace Game.Engine.CharacterClasses
             // receive the result of your opponent's action
             foreach (StatPackage pack in packs)
             {
-                parentSession.UpdateStat(2, -1 * pack.StrengthDmg);
-                parentSession.UpdateStat(3, -1 * pack.ArmorDmg);
-                parentSession.UpdateStat(4, -1 * pack.PrecisionDmg);
-                parentSession.UpdateStat(5, -1 * pack.MagicPowerDmg);
+                strength -= pack.StrengthDmg;
+                armor -= pack.ArmorDmg;
+                precision -= pack.PrecisionDmg;
+                magicPower -= pack.MagicPowerDmg;
+                if (Strength < 0) strength = -StrengthBuff;
+                if (Armor < 0) armor = -ArmorBuff;
+                if (Precision < 0) precision = -PrecisionBuff;
+                if (MagicPower < 0) magicPower = -MagicPowerBuff;
                 // damageAfterArmor = 100.0 * damageBeforeArmor / (100.0 + Armor)
                 parentSession.UpdateStat(1, -1 * (100 * pack.HealthDmg) / (100 + Armor));
             }

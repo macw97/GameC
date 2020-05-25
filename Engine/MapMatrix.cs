@@ -223,6 +223,7 @@ namespace Game.Engine
         private bool ValidPlace(int x, int y)
         {
             if (x < 1 || y < 1 || x > Width - 2 || y > Height - 2) return false;
+            if (Matrix[y, x] > 2000) return false;
             if ((Matrix[y, x - 1] != 1 && Matrix[y, x + 1] != 1) && (Matrix[y - 1, x] == 1 && Matrix[y + 1, x] == 1)) return false;
             if ((Matrix[y - 1, x] != 1 && Matrix[y + 1, x] != 1) && (Matrix[y, x - 1] == 1 && Matrix[y, x + 1] == 1)) return false;
             return true;
