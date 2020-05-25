@@ -261,5 +261,32 @@ namespace Game.Engine
             RefreshStats();
         }
 
+        public int CheckStat(int number)
+        {
+            // check any given statistics
+            // use the same codes as in UpdateStat
+            // except for code 7, which returns player level instead of XP
+            switch (number)
+            {
+                case 1:
+                    return currentPlayer.Health;
+                case 2:
+                    return currentPlayer.Strength;
+                case 3:
+                    return currentPlayer.Armor;
+                case 4:
+                    return currentPlayer.Precision;
+                case 5:
+                    return currentPlayer.MagicPower;
+                case 6:
+                    return currentPlayer.Stamina;
+                case 7:
+                    return currentPlayer.Level;
+                case 8:
+                    return currentPlayer.Gold;
+            }
+            return 0;
+        }
+
     }
 }
