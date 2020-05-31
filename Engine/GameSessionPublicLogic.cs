@@ -153,6 +153,17 @@ namespace Game.Engine
                 }
             }
         }
+        /*public void RemoveThisItem(string name)
+        {
+            for(int i=0;i<30;i++)
+            {
+                if (String.Equals(items[i].PublicName, name))
+                {
+                    DeleteItemFromGrid(i);
+                    break;
+                }
+            }
+        }*/
 
 
         /***************************        SKILLS      ***************************/

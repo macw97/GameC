@@ -38,7 +38,7 @@ namespace Game.Engine.Interactions
             parentSession.SendText("\nHello adventurer. My name is Gymir. Could you help me chop this wood?");
             // get player choice
             int choice = GetListBoxChoice(new List<string>() { "Sure, no problem!", "Everything comes with a price, you know.", "Do I look like a lumberjack to you?" });
-            switch(choice)
+            switch (choice)
             {
                 case 0:
                     payment = 0;
@@ -47,25 +47,30 @@ namespace Game.Engine.Interactions
                 case 1:
                     parentSession.SendText("Come on, I don't have much money... is 15 gold enough?");
                     int choice2 = GetListBoxChoice(new List<string>() { "*Sighs* Fine.", "Sorry, that's not enough." });
-                    if(choice2 == 0)
+                    if (choice2 == 0)
                     {
                         payment = 15;
                         ChopWood();
                     }
                     else parentSession.SendText("People these days... go away then!");
                     break;
+
                 default:
                     parentSession.SendText("No, you look like a useless vagabond. Go away!");
                     break;
+
+
             }
+
         }
+
 
         // what happens if you chop wood
         private void ChopWood()
         {
             parentSession.SendText("Great! You can use my axe over there.");
             int choice = GetListBoxChoice(new List<string>() { "Spend the next hour chopping wood", "Wait until he goes back to his home and run away with the axe" });
-            if(choice == 0)
+            if (choice == 0)
             {
                 if (payment == 0)
                 {
@@ -89,3 +94,4 @@ namespace Game.Engine.Interactions
         }
     }
 }
+

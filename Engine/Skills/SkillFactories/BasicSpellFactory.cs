@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Game.Engine.Skills.BasicSkills;
 using Game.Engine.CharacterClasses;
+using Game.Engine.Skills.AdvancedSpells;
 
 namespace Game.Engine.Skills.SkillFactories
 {
@@ -35,7 +36,13 @@ namespace Game.Engine.Skills.SkillFactories
                 if (s1.MinimumLevel <= player.Level) tmp.Add(s1); // check level requirements
                 if (s2.MinimumLevel <= player.Level) tmp.Add(s2);
                 if (s3.MinimumLevel <= player.Level) tmp.Add(s3);
-                if (tmp.Count == 0) return null;
+                foreach (Skill skill in playerSkills)
+                {
+                    if (skill is FireArrow) tmp.Remove(s1);
+                    if (skill is LightFlash) tmp.Remove(s2);
+                    if (skill is WindGust) tmp.Remove(s3);
+                }
+                    if (tmp.Count == 0) return null;
                 return tmp[Index.RNG(0, tmp.Count)];
             }
             else return null; // a combo of BasicSpells has been already learned - this factory doesn't offer double combos so we stop here

@@ -15,7 +15,9 @@ namespace Game.Engine.Items.ItemFactories
                 new SteelArmor(),
                 new AntiMagicArmor(),
                 new BerserkerArmor(),
-                new GrowingStoneArmor()
+                new GrowingStoneArmor(),
+                new BeliarArmor(),
+                new Engine.Items.Artefacts.BeliarNeckles()
             };
             return basicArmor[Index.RNG(0, basicArmor.Count)];
         }
@@ -26,7 +28,8 @@ namespace Game.Engine.Items.ItemFactories
             {
                 new SteelArmor(),
                 new AntiMagicArmor(),
-                new BerserkerArmor()
+                new BerserkerArmor(),
+                new Engine.Items.Artefacts.BeliarNeckles()
             };
             return basicArmor[Index.RNG(0, basicArmor.Count)];
         }
@@ -37,7 +40,9 @@ namespace Game.Engine.Items.ItemFactories
             {
                 new SteelArmor(),
                 new AntiMagicArmor(),
-                new GrowingStoneArmor()
+                new GrowingStoneArmor(),
+                new BeliarArmor(),
+                new Engine.Items.Artefacts.BeliarNeckles()
             };
             return basicArmor[Index.RNG(0, basicArmor.Count)];
         }

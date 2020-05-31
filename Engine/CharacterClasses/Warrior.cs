@@ -14,7 +14,7 @@ namespace Game.Engine.CharacterClasses
             ClassName = "Warrior";
             Health = 100;
             Strength = 50;
-            Armor = 0;
+            Armor = 40;
             Precision = 50;
             MagicPower = 0;
             Stamina = 100;

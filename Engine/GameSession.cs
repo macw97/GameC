@@ -103,7 +103,6 @@ namespace Game.Engine
                 }
             }      
         }
-
         private void InitializeMapDisplay(int codeNumber)
         {
             parentPage.ClearMap();

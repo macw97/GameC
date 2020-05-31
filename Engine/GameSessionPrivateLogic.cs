@@ -82,6 +82,20 @@ namespace Game.Engine
             itemPositions.Add(i);
             RefreshItems();
         }
+       /* public void DeleteItemFromGrid(int i)
+        {
+            foreach(UIElement display in parentPage.ItemGrid.Children)
+            {
+                if (Grid.GetRow(display) == (i/5) && Grid.GetColumn(display) == (i % 5))
+                {
+                    itemPositions.Remove(i);
+                    parentPage.ItemGrid.Children.Clear();
+                 
+                    break;
+                }
+            }
+            RefreshItems();
+        }*/
         private void RefreshItems()
         {
             // re-check for active items - both the game logic and the user may have changed them
