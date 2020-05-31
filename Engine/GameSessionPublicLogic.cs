@@ -263,7 +263,7 @@ namespace Game.Engine
 
         public int CheckStat(int number)
         {
-            // check any given statistics
+            // check any given statistic
             // use the same codes as in UpdateStat
             // except for code 7, which returns player level instead of XP
             switch (number)

@@ -112,7 +112,7 @@ namespace Game.Engine
                 for (int j = 0; j < mapMatrix.Height; j++)
                 {
                     // scan rows first
-                    if (mapMatrix.Matrix[j, i] >= 3000 && mapMatrix.Matrix[j, i] < 4000)
+                    if (mapMatrix.Matrix[j, i] >= 3000)
                     {
                         parentPage.AddInteraction(i, j, mapMatrix.Matrix[j, i]);
                     }
